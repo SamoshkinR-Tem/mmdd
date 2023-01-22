@@ -1,0 +1,22 @@
+buildscript {
+    ext {
+        min_sdk = 23
+        compile_sdk = 33
+        target_sdk = 33
+
+        compose_version = '1.3.3'
+    }
+}
+
+ext {
+    androidx = [
+            core: "androidx.core:core-ktx:1.9.0",
+            lifecycle: "androidx.lifecycle:lifecycle-runtime-ktx:2.3.1",
+    ]
+    compose =[
+            ui: "androidx.compose.ui:ui:$compose_version",
+            preview: "androidx.compose.ui:ui-tooling-preview:$compose_version",
+            activity: "androidx.activity:activity-compose:1.3.1",
+            material3: "androidx.compose.material3:material3:1.0.0-alpha02",
+    ]
+}

@@ -1,0 +1,19 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+apply from: "$rootDir/gradle/android-common.gradle"
+
+android {
+    namespace 'com.artsam.mmdd'
+    defaultConfig {
+        applicationId "com.artsam.mmdd"
+        versionName "1.0.0"
+        versionCode 1
+    }
+}
+
+dependencies {
+    api project(':presentation')
+}
