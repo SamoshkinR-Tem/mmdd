@@ -30,13 +30,13 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.artsam.presentation.compose.ui.drawer.AppModalDrawer
-import com.artsam.presentation.home.PicturesScreen
-import com.artsam.presentation.statisctics.StatisticsScreen
+import com.artsam.presentation.compose.ui.home.PicturesScreen
+import com.artsam.presentation.compose.ui.statisctics.StatisticsScreen
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
 @Composable
-fun TodoNavGraph(
+fun MukundaNavGraph(
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController(),
     coroutineScope: CoroutineScope = rememberCoroutineScope(),

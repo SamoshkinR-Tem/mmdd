@@ -1,4 +1,4 @@
-package com.artsam.presentation.home
+package com.artsam.presentation.compose.ui.home
 
 import androidx.lifecycle.ViewModel
 

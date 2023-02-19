@@ -11,7 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.artsam.presentation.compose.ui.theme.MukundaTheme
-import com.artsam.presentation.navigation.TodoNavGraph
+import com.artsam.presentation.navigation.MukundaNavGraph
 import com.google.accompanist.appcompattheme.AppCompatTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             // using of material
             AppCompatTheme {
-                TodoNavGraph()
+                MukundaNavGraph()
             }
 
             // using of material3
