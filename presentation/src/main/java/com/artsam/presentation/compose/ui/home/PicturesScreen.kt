@@ -3,11 +3,15 @@ package com.artsam.presentation.compose.ui.home
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.selection.toggleable
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
+import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -29,12 +33,62 @@ class PicturesFragment : Fragment() {
 fun PicturesScreen() {
     Column() {
         Toolbar()
-        ScreenContent()
+        ChipsRow()
+        PicturesGrid()
     }
 }
 
 @Composable
-private fun ScreenContent() {
+fun ChipsRow(
+    //cars: List<MukundaPicture> = getAllCars(),
+    //selectedCar: Car? = null,
+    onSelectedChanged: (String) -> Unit = {},
+) {
+    LazyRow(modifier = Modifier.padding(16.dp, 16.dp, 16.dp)) {
+        items(count = 10) {
+            Chip(
+                name = "10 x 15",
+                isSelected = false,
+                onSelectionChanged = {
+                    onSelectedChanged(it)
+                },
+            )
+        }
+    }
+}
+
+@Composable
+fun Chip(
+    name: String = "Chip",
+    isSelected: Boolean = false,
+    onSelectionChanged: (String) -> Unit = {},
+) {
+    Surface(
+        modifier = Modifier.padding(4.dp),
+        elevation = 8.dp,
+        shape = MaterialTheme.shapes.medium,
+        color = if (isSelected) Color.LightGray else MaterialTheme.colors.primary
+    ) {
+        Row(modifier = Modifier
+            .toggleable(
+                value = isSelected,
+                onValueChange = {
+                    onSelectionChanged(name)
+                }
+            )
+        ) {
+            Text(
+                text = name,
+                style = MaterialTheme.typography.body2,
+                color = Color.White,
+                modifier = Modifier.padding(8.dp)
+            )
+        }
+    }
+}
+
+@Composable
+private fun PicturesGrid() {
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),
         contentPadding = PaddingValues(16.dp),

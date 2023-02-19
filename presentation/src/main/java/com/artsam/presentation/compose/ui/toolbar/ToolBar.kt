@@ -34,8 +34,7 @@ fun Toolbar() {
         verticalAlignment = Alignment.CenterVertically
     ) {
         Text(
-            modifier = Modifier
-                .padding(start = 20.dp),
+            modifier = Modifier.padding(start = 20.dp),
             fontSize = 20.sp,
             fontStyle = FontStyle.Italic,
             fontWeight = FontWeight.W600,
@@ -49,8 +48,8 @@ fun Toolbar() {
         )
         Image(
             modifier = Modifier
-                .padding(top = 8.dp, bottom = 8.dp, end = 16.dp)
-                .size(64.dp)
+                .padding(top = 12.dp, bottom = 12.dp, end = 16.dp)
+                .size(58.dp)
                 .clip(CircleShape),
             painter = painterResource(id = R.drawable.ghovardhan),
             contentDescription = "Avatar",

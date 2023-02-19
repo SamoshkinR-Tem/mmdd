@@ -14,9 +14,12 @@
   ~ limitations under the License.
   -->
 <resources>
-    <!-- Base application theme. -->
+    <!--
+    ~ Base application theme. Applied in the manifest file.
+    ~ Base set of styles that apply to all versions.
+    -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar" />
 
-    <!-- Base activity theme. -->
+    <!-- Base activity theme. Applied in the manifest file. -->
     <style name="AppTheme.OverlapSystemBar" parent="Theme.AppCompat.Light.NoActionBar" />
 </resources>
