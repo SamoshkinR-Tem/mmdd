@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme.OverlapSystemBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <!-- Defining that new color in ColorPrimaryDark -->
+        <item name="colorPrimaryDark">@color/teal_200</item> <!-- change statusBarColor -->
+        <item name="colorAccent">@color/black</item>
+
+        <!-- change statusBarColor but more powerful then "colorPrimaryDark" -->
+        <item name="android:statusBarColor">@android:color/white</item>
+        <item name="android:windowLightStatusBar">true</item> <!-- change statusBar text color (black/withe) -->
+
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+</resources>

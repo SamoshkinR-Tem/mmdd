@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ui_pictures_title">Pictures List</string>
+    <string name="ui_statistics_title">Statistics</string>
+
+    <!-- Content Descriptions -->
+    <string name="ui_pictures_header_image_content_desc">Pictures header image</string>
+    <string name="ui_pictures">Pictures</string>
+</resources>

@@ -16,4 +16,10 @@ android {
 
 dependencies {
     api project(':presentation')
+
+    // <DI>
+    api koin
+
+    // Logging
+    api timber
 }
