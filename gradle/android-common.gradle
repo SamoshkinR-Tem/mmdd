@@ -8,7 +8,6 @@ android {
         // buildConfigField("String", "BUILD_TIMESTAMP", "\"" + System.currentTimeMillis().toString() + "\"")
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {

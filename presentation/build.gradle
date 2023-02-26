@@ -27,6 +27,7 @@ android {
             excludes += '/META-INF/{AL2.0,LGPL2.1}'
         }
     }
+    namespace 'com.artsam.presentation'
 }
 
 dependencies {
@@ -38,10 +39,9 @@ dependencies {
     api compose.navigation
     api compose.lifecycle // Integration with ViewModels
     api compose.material
-    api compose.material3
 
     // Koin
-    api koin
+    api libs.koin
 
     // region Test
     testImplementation 'junit:junit:4.13.2'

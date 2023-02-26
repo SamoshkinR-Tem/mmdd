@@ -9,8 +9,10 @@ buildscript {
 }
 
 ext {
-    koin = "io.insert-koin:koin-android:3.2.2"
-    timber = "com.jakewharton.timber:timber:5.0.1"
+    libs = [
+            koin  : "io.insert-koin:koin-android:3.2.2",
+            timber: "com.jakewharton.timber:timber:5.0.1"
+    ]
 
     compose = [
             ui        : "androidx.compose.ui:ui:$compose_version",

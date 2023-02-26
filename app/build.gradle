@@ -18,8 +18,8 @@ dependencies {
     api project(':presentation')
 
     // <DI>
-    api koin
+    api libs.koin
 
     // Logging
-    api timber
+    api libs.timber
 }
