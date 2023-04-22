@@ -47,7 +47,6 @@ import com.artsam.presentation.R
 import com.artsam.presentation.compose.ui.theme.primaryDarkColor
 import com.artsam.presentation.navigation.MukundaDestinations
 import com.artsam.presentation.navigation.MukundaNavigationActions
-import com.google.accompanist.appcompattheme.AppCompatTheme
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -173,7 +172,7 @@ private fun DrawerButton(
 @Preview("Drawer contents")
 @Composable
 fun PreviewAppDrawer() {
-    AppCompatTheme {
+    MaterialTheme {
         Surface {
             AppDrawer(
                 currentRoute = MukundaDestinations.HOME_ROUTE,
