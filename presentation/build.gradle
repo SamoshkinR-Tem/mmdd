@@ -7,6 +7,7 @@ apply from: '../gradle/android-common.gradle'
 
 android {
     // resourcePrefix "ui_"
+    namespace 'com.artsam.presentation'
 
     defaultConfig {
         vectorDrawables {
@@ -27,7 +28,6 @@ android {
             excludes += '/META-INF/{AL2.0,LGPL2.1}'
         }
     }
-    namespace 'com.artsam.presentation'
 }
 
 dependencies {

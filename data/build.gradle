@@ -1,15 +1,12 @@
 plugins {
-    id 'com.android.library'
-    id 'org.jetbrains.kotlin.android'
+    id("org.jetbrains.kotlin.jvm")
 }
 
-apply from: '../gradle/android-common.gradle'
-android { resourcePrefix "data_"
-    namespace 'com.artsam.data'
+java {
+    sourceCompatibility = "11"
+    targetCompatibility = "11"
 }
 
 dependencies {
 
-    // Koin
-    api libs.koin
 }
