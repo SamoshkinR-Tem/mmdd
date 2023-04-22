@@ -47,6 +47,7 @@ import com.artsam.presentation.R
 import com.artsam.presentation.compose.ui.theme.primaryDarkColor
 import com.artsam.presentation.navigation.MukundaDestinations
 import com.artsam.presentation.navigation.MukundaNavigationActions
+import com.google.accompanist.appcompattheme.AppCompatTheme
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -169,6 +170,16 @@ private fun DrawerButton(
     }
 }
 
+/**
+ * Use [AppCompatTheme] if you need to use legacy or .xml
+ * but it doesn't work with the Compose @Preview("Class contents")
+ * To make the preview work - use  [MaterialTheme]
+ *
+ * @see <a href="https://developer.android.com/jetpack/compose/designsystems/views-to-compose">developer.android.com</a>
+ *
+ * @see <a href="https://habr.com/ru/companies/surfstudio/articles/570994/">habr.com</a>
+ *
+ */
 @Preview("Drawer contents")
 @Composable
 fun PreviewAppDrawer() {
