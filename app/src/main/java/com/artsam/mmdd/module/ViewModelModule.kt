@@ -1,4 +1,4 @@
-package com.artsam.mmdd.di
+package com.artsam.mmdd.module
 
 import androidx.annotation.Keep
 import com.artsam.presentation.compose.ui.home.PicturesViewModel
