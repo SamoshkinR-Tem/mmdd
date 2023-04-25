@@ -8,5 +8,12 @@ java {
 }
 
 dependencies {
+    api coroutines.core
 
+    api retrofit.core
+    api retrofit.gsonConverter
+
+    testImplementation tests.junit
+    testImplementation tests.mockito
+    testImplementation coroutines.test
 }

@@ -1,9 +1,11 @@
 package com.artsam.mmdd
 
 import android.app.Application
+import apis
 import com.artsam.mmdd.module.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
+import repo
 import timber.log.Timber
 
 class MukundaApp : Application() {
@@ -22,6 +24,8 @@ class MukundaApp : Application() {
         startKoin {
             androidContext(this@MukundaApp)
             modules(
+                apis,
+                repo,
                 viewModelModule,
             )
         }

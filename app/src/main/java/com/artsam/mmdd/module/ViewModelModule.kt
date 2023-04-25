@@ -6,6 +6,6 @@ import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 @Keep
-val viewModelModule = module {
+internal val viewModelModule = module {
     viewModel { PicturesViewModel() }
 }

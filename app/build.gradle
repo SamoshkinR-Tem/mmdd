@@ -15,7 +15,9 @@ android {
 }
 
 dependencies {
-    api project(':presentation')
+    // Modules
+    api project(path: ':data')
+    api project(path: ':presentation')
 
     // <DI>
     api libs.koin

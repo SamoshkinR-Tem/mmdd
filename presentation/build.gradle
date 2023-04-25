@@ -47,11 +47,11 @@ dependencies {
     api libs.glide
 
     // region Test
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-    androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
-    debugImplementation "androidx.compose.ui:ui-tooling:$compose_version" // Android Studio Preview support
-    debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_version"
+    testImplementation tests.junit
+    androidTestImplementation tests.ext
+    androidTestImplementation tests.espresso
+    androidTestImplementation compose.test.composeJunit4
+    debugImplementation compose.test.composeTooling
+    debugImplementation compose.test.composeManifest
     // endregion
 }
