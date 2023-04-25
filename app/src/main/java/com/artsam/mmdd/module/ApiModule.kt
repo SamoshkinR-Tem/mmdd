@@ -1,6 +1,6 @@
 import androidx.annotation.Keep
 import com.artsam.data.api.PaintingsApi
-import com.artsam.data.utils.DateUtils.STANDARD_SERVER_FORMAT
+import com.artsam.data.utils.DateUtils.DATE_TIME_SHORT_TIME_ZONE_FORMAT
 import com.google.gson.GsonBuilder
 import org.koin.dsl.module
 import retrofit2.Retrofit
@@ -20,7 +20,7 @@ internal val apis = module {
 
 private fun createGsonConverterFactory(): GsonConverterFactory {
     val gson = GsonBuilder()
-        .setDateFormat(STANDARD_SERVER_FORMAT)
+        .setDateFormat(DATE_TIME_SHORT_TIME_ZONE_FORMAT)
         .setLenient()
         .create()
     return GsonConverterFactory.create(gson)

@@ -3,7 +3,6 @@ package com.artsam.data.repo
 import com.artsam.data.api.PaintingsApi
 import com.artsam.data.entity.Painting
 import com.artsam.data.model.PaintingsResponse
-import com.google.gson.GsonBuilder
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert.assertEquals
@@ -51,7 +50,6 @@ class PaintingsRepositoryTest {
             api.fetch(
                 "master",
                 "paintings-list.json",
-                //"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",
             )
         ).thenReturn(expectedData)
 
@@ -66,14 +64,9 @@ class PaintingsRepositoryTest {
 
     @Test
     fun `fetching data with real PaintingRepo`() = runTest {
-        val gson = GsonBuilder()
-            //.setDateFormat(DateUtils.STANDARD_SERVER_FORMAT)
-            .setLenient()
-            .create()
         val retrofit = Retrofit.Builder()
             .baseUrl("https://github.com/SamoshkinR-Tem/mmdd.pictures/")
-            //.baseUrl("https://raw.githubusercontent.com/SamoshkinR-Tem/mmdd.pictures/")
-            .addConverterFactory(GsonConverterFactory.create(gson))
+            .addConverterFactory(GsonConverterFactory.create())
             .build()
         api = retrofit.create(PaintingsApi::class.java)
         repo = PaintingsRepository(api = lazy { api })
@@ -104,3 +97,5 @@ class PaintingsRepositoryTest {
         }
     }
 }
+
+//.baseUrl("https://raw.githubusercontent.com/SamoshkinR-Tem/mmdd.pictures/")

@@ -12,15 +12,11 @@ class PaintingsRepository(
     fun fetch(
         branch: String = "master",
         path: String = "paintings-list.json",
-        token: String = "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",
-        contentType: String = "application/json",
     ): Flow<List<Painting>> = flow {
         emit(
             api.value.fetch(
                 branch,
                 path,
-                //token,
-                //contentType,
             ).paintings
         )
     }

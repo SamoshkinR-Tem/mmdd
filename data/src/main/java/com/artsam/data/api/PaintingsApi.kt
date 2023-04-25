@@ -10,7 +10,5 @@ interface PaintingsApi {
     suspend fun fetch(
         @Path("branch") branch: String,
         @Path("path") path: String,
-        //@Header("Authorization") token: String,
-        //@Header("Content-Type") contentType: String,
     ): PaintingsResponse
 }
