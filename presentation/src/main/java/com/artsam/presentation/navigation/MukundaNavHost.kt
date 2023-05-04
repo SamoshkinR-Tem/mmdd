@@ -23,21 +23,19 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.artsam.presentation.compose.ui.drawer.AppModalDrawer
-import com.artsam.presentation.compose.ui.home.PicturesScreen
-import com.artsam.presentation.compose.ui.statisctics.StatisticsScreen
+import com.artsam.presentation.ui.drawer.AppModalDrawer
+import com.artsam.presentation.ui.home.HomeScreen
+import com.artsam.presentation.ui.statisctics.StatisticsScreen
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
 @Composable
-fun MukundaNavGraph(
-    modifier: Modifier = Modifier,
+fun MukundaNavHost(
     navController: NavHostController = rememberNavController(),
     coroutineScope: CoroutineScope = rememberCoroutineScope(),
     drawerState: DrawerState = rememberDrawerState(initialValue = DrawerValue.Closed),
@@ -52,13 +50,10 @@ fun MukundaNavGraph(
     NavHost(
         navController = navController,
         startDestination = startDestination,
-        modifier = modifier
     ) {
-        composable(
-            MukundaDestinations.HOME_ROUTE,
-        ) { entry ->
+        composable(MukundaDestinations.HOME_ROUTE) {
             AppModalDrawer(drawerState, currentRoute, navActions) {
-                PicturesScreen()
+                HomeScreen()
             }
         }
         composable(MukundaDestinations.STATISTICS_ROUTE) {

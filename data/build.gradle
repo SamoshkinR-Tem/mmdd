@@ -1,0 +1,19 @@
+plugins {
+    id("org.jetbrains.kotlin.jvm")
+}
+
+java {
+    sourceCompatibility = "11"
+    targetCompatibility = "11"
+}
+
+dependencies {
+    api coroutines.core
+
+    api retrofit.core
+    api retrofit.gsonConverter
+
+    testImplementation tests.junit
+    testImplementation tests.mockito
+    testImplementation coroutines.test
+}

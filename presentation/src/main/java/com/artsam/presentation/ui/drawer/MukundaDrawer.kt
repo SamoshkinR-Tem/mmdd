@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.artsam.presentation.compose.ui.drawer
+package com.artsam.presentation.ui.drawer
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -44,7 +44,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.artsam.presentation.R
-import com.artsam.presentation.compose.ui.theme.primaryDarkColor
+import com.artsam.presentation.ui.theme.primaryDarkColor
 import com.artsam.presentation.navigation.MukundaDestinations
 import com.artsam.presentation.navigation.MukundaNavigationActions
 import com.google.accompanist.appcompattheme.AppCompatTheme
@@ -170,10 +170,20 @@ private fun DrawerButton(
     }
 }
 
+/**
+ * Use [AppCompatTheme] if you need to use legacy or .xml
+ * but it doesn't work with the Compose @Preview("Class contents")
+ * To make the preview work - use  [MaterialTheme]
+ *
+ * @see <a href="https://developer.android.com/jetpack/compose/designsystems/views-to-compose">developer.android.com</a>
+ *
+ * @see <a href="https://habr.com/ru/companies/surfstudio/articles/570994/">habr.com</a>
+ *
+ */
 @Preview("Drawer contents")
 @Composable
 fun PreviewAppDrawer() {
-    AppCompatTheme {
+    MaterialTheme {
         Surface {
             AppDrawer(
                 currentRoute = MukundaDestinations.HOME_ROUTE,

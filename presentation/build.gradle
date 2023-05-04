@@ -7,6 +7,7 @@ apply from: '../gradle/android-common.gradle'
 
 android {
     // resourcePrefix "ui_"
+    namespace 'com.artsam.presentation'
 
     defaultConfig {
         vectorDrawables {
@@ -19,7 +20,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion '1.1.1'
+        kotlinCompilerExtensionVersion '1.4.3'
     }
 
     packagingOptions {
@@ -30,25 +31,28 @@ android {
 }
 
 dependencies {
+    api project(path: ':data')
+
     // Compose
     api compose.ui
     api compose.preview // Android Studio Preview support
     api compose.activity // Integration with activities
-    api compose.appcompat
     api compose.navigation
-    api compose.lifecycle // Integration with ViewModels
-    api compose.material
-    api compose.material3
+    api compose.material // NOT a Material3
+    api compose.appcompat // If i need to use AppCompatTheme
 
-    // Koin
-    api koin
+    // Koin for ViewModel
+    api libs.koin
+
+    // Glide
+    api libs.glide
 
     // region Test
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-    androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
-    debugImplementation "androidx.compose.ui:ui-tooling:$compose_version" // Android Studio Preview support
-    debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_version"
+    testImplementation tests.junit
+    androidTestImplementation tests.ext
+    androidTestImplementation tests.espresso
+    androidTestImplementation compose.test.composeJunit4
+    debugImplementation compose.test.composeTooling
+    debugImplementation compose.test.composeManifest
     // endregion
 }

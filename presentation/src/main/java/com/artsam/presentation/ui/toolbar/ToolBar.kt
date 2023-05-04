@@ -1,4 +1,4 @@
-package com.artsam.presentation.compose.ui.toolbar
+package com.artsam.presentation.ui.toolbar
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
@@ -21,12 +21,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.artsam.presentation.R
-import com.artsam.presentation.compose.ui.theme.Purple80
+import com.artsam.presentation.ui.theme.Purple80
 
 @OptIn(ExperimentalTextApi::class)
 @Composable
 fun Toolbar() {
-    val GradientColors = listOf(Color.Magenta, Color.Blue, Purple80)
+    val gradientColors = listOf(Color.Magenta, Color.Blue, Purple80)
 
     Row(
         modifier = Modifier.fillMaxWidth(),
@@ -41,7 +41,7 @@ fun Toolbar() {
             fontFamily = FontFamily.Serif,
             style = TextStyle(
                 brush = Brush.linearGradient(
-                    colors = GradientColors
+                    colors = gradientColors
                 )
             ),
             text = "Mukunda Mohini devi dasi"

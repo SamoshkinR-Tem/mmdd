@@ -14,4 +14,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Mukunda"
 include ':app'
+include ':data'
 include ':presentation'

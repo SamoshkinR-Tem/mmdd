@@ -1,4 +1,4 @@
-package com.artsam.presentation.compose.ui.statisctics
+package com.artsam.presentation.ui.statisctics
 
 import androidx.compose.runtime.Composable
 

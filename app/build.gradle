@@ -15,11 +15,13 @@ android {
 }
 
 dependencies {
-    api project(':presentation')
+    // Modules
+    api project(path: ':data')
+    api project(path: ':presentation')
 
     // <DI>
-    api koin
+    api libs.koin
 
     // Logging
-    api timber
+    api libs.timber
 }
