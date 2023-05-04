@@ -1,10 +1,10 @@
-package com.artsam.presentation.main
+package com.artsam.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material.MaterialTheme
-import com.artsam.presentation.navigation.MukundaNavGraph
+import com.artsam.presentation.navigation.MukundaNavHost
 import com.google.accompanist.appcompattheme.AppCompatTheme
 
 class MainActivity : ComponentActivity() {
@@ -18,7 +18,7 @@ class MainActivity : ComponentActivity() {
              * To make the preview work - use  [MaterialTheme]
              */
             MaterialTheme {
-                MukundaNavGraph()
+                MukundaNavHost()
             }
         }
     }

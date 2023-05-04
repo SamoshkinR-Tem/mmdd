@@ -13,7 +13,7 @@ import org.mockito.Mockito.`when`
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-@OptIn(ExperimentalCoroutinesApi::class) // required for 'runTest' method
+@OptIn(ExperimentalCoroutinesApi::class) // required for 'runTest' method. Means that behaviour can be changed any moment
 class PaintingsRepositoryTest {
 
     private lateinit var api: PaintingsApi

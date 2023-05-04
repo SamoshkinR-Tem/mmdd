@@ -31,16 +31,17 @@ android {
 }
 
 dependencies {
+    api project(path: ':data')
+
     // Compose
     api compose.ui
     api compose.preview // Android Studio Preview support
     api compose.activity // Integration with activities
-    api compose.appcompat
     api compose.navigation
-    api compose.lifecycle // Integration with ViewModels
-    api compose.material
+    api compose.material // NOT a Material3
+    api compose.appcompat // If i need to use AppCompatTheme
 
-    // Koin
+    // Koin for ViewModel
     api libs.koin
 
     // Glide
