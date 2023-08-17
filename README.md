@@ -1,2 +1,2 @@
 # mmdd
-Mukunda Mohini Devi Dasi app
+Mukunda Mohini Devi Dasi artist landing app
